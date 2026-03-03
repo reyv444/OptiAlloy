@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About – OptiAlloy</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ABOUT PAGE BACKGROUND */
+    .about-bg {
+      background: url("images/about-background.png") top/cover no-repeat;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    /* DARK OVERLAY FOR READABILITY */
+    .about-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+
+    /* ENSURE TEXT IS ABOVE OVERLAY */
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: auto;
+      color: #d9d9d9;
+    }
+
+    /* PARAGRAPH SPACING */
+    .about-content p {
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR WITH LOGO + HAMBURGER -->
+  <div class="top-bar">
+    <img src="images/your-logo-file.png" alt="OptiAlloy Logo" class="logo">
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN LOADER -->
+  <div class="loader-screen">
+    <div class="loader"></div>
+    <div class="loader-text">OptiAlloy</div>
+  </div>
+
+  <!-- SLIDE MENU -->
+  <nav class="side-menu" id="sideMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="process.html">Anodizing Process</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- PAGE CONTENT WITH BACKGROUND -->
+ <section class="about-wrapper">
+
+  <div class="about-text">
+    <h1>About OptiAlloy</h1>
+
+    <p>
+      OptiAlloy is an upcoming anodizing facility focused on delivering high‑quality surface treatment solutions for industrial aluminum components.
+    </p>
+
+    <p>
+      The facility is being developed with an emphasis on consistency, technical precision, and adherence to recognized industry standards.
+    </p>
+
+    <p>
+      Operations are currently under development, including infrastructure setup, equipment installation, and process calibration.
+    </p>
+  </div>
+
+  <!-- RIGHT SIDE SLIDER -->
+  <div class="about-slider">
+    <img src="images/about-background.png" class="active">
+    <img src="images/about2.png">
+    <img src="images/about3.png">
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    OptiAlloy Coating Solutions LLP • +91 701 117 3199 • info@optialloy.co.in
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
