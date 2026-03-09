@@ -302,29 +302,30 @@ footer {
   color: #d9d9d9;
 }
 
-/* MOBILE RESPONSIVE FIXES */
-@media (max-width: 900px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .about-slider {
-    width: 100%;
-    height: 240px;
-  }
-
-  .why-us {
-    padding-left: 20px; /* less offset on smaller screens */
-  }
+/* ABOUT PAGE BACKGROUND PARALLAX */
+.about-bg {
+  background: url("images/about-background.png") center 75%/cover no-repeat;
+  padding: 120px 20px;
+  position: relative;
+  background-attachment: fixed; /* parallax effect */
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
+.about-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
 
-  .hero p {
-    font-size: 1rem;
-    margin-top: 8px
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  color: #d9d9d9;
+}
+
