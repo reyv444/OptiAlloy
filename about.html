@@ -2,37 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>About – OptiAlloy</title>
 
-  <!-- SEO TITLE -->
-  <title>OptiAlloy – Anodizing & Surface Engineering Solutions</title>
-
-  <!-- META DESCRIPTION -->
-  <meta name="description" 
-        content="OptiAlloy provides high‑quality anodizing, conversion coating, and surface engineering solutions for aerospace, automotive, electronics, and industrial applications.">
-
-  <!-- KEYWORDS -->
-  <meta name="keywords" 
-        content="anodizing, coating solutions, surface engineering, metal finishing, corrosion resistance, OptiAlloy, industrial coatings, anodized aluminum, anodizing aluminum">
-
-  <!-- VIEWPORT -->
+  <!-- VIEWPORT (required for mobile responsiveness) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="OptiAlloy – Surface Engineering Experts">
-  <meta property="og:description" content="High‑quality anodizing and coating solutions for industrial applications.">
-  <meta property="og:image" content="images/factory.jpg.jpeg">
-  <meta property="og:type" content="website">
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="images/your-logo-file.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ABOUT PAGE BACKGROUND */
+    .about-bg {
+      background: url("images/about-background.png") top/cover no-repeat;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    /* DARK OVERLAY FOR READABILITY */
+    .about-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+
+    /* ENSURE TEXT IS ABOVE OVERLAY */
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: auto;
+      color: #d9d9d9;
+    }
+
+    /* PARAGRAPH SPACING */
+    .about-content p {
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
+  <!-- TOP BAR WITH LOGO + HAMBURGER -->
   <div class="top-bar">
     <img src="images/your-logo-file.png" alt="OptiAlloy Logo" class="logo">
     <div class="hamburger" id="hamburger">
@@ -49,28 +66,31 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Strength Through Surface Engineering</h1>
-    <p>High‑quality anodizing and coating solutions.</p>
+  <!-- PAGE CONTENT WITH BACKGROUND -->
+  <section class="about-bg">
+    <div class="about-content">
+      <h1>About OptiAlloy</h1>
 
-    <p class="facility-note">
-      Our manufacturing facility is presently under setup.<br>
-      We will begin operations soon.
-    </p>
+      <p>
+        OptiAlloy is an upcoming anodizing facility focused on delivering high‑quality surface treatment solutions for industrial aluminum components.
+      </p>
+
+      <p>
+        The facility is being developed with an emphasis on consistency, technical precision, and adherence to recognized industry standards.
+      </p>
+
+      <p>
+        Operations are currently under development, including infrastructure setup, equipment installation, and process calibration.
+      </p>
+    </div>
   </section>
 
-  <!-- WHY US SECTION -->
-  <section class="why-us">
-    <h2>Why Choose OptiAlloy?</h2>
-    <ul>
-      <li>✔ Premium anodizing and coating quality</li>
-      <li>✔ Engineered consistency and precision</li>
-      <li>✔ Long‑lasting corrosion resistance</li>
-      <li>✔ Trusted by aerospace, automotive, and industrial sectors</li>
-      <li>✔ Modern facility with advanced equipment</li>
-    </ul>
-  </section>
+  <!-- OPTIONAL SLIDER (right side images) -->
+  <div class="about-slider">
+    <img src="images/about-background.png" class="active">
+    <img src="images/about2.png">
+    <img src="images/about3.png">
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -79,5 +99,6 @@
 
   <!-- SCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
