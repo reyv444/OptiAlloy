@@ -13,9 +13,14 @@
   <style>
     /* ABOUT PAGE BACKGROUND */
     .about-bg {
-      background: url("images/about-background.png") top/cover no-repeat;
+      background: url("images/about-background.png") center bottom/cover no-repeat;
+      min-height: 100vh;
       padding: 120px 20px;
       position: relative;
+      background-attachment: fixed; /* parallax effect */
+      animation: zoomIn 1.8s ease-out forwards; /* same as index */
+      transform: scale(1.05);
+      opacity: 0;
     }
 
     /* DARK OVERLAY FOR READABILITY */
@@ -37,12 +42,21 @@
       max-width: 900px;
       margin: auto;
       color: #d9d9d9;
+      text-align: center; /* match hero style */
     }
 
     /* PARAGRAPH SPACING */
     .about-content p {
       margin-bottom: 18px;
       line-height: 1.6;
+    }
+
+    /* Reuse zoomIn keyframes from index */
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -84,13 +98,6 @@
       </p>
     </div>
   </section>
-
-  <!-- OPTIONAL SLIDER (right side images) -->
-  <div class="about-slider">
-    <img src="images/about-background.png" class="active">
-    <img src="images/about2.png">
-    <img src="images/about3.png">
-  </div>
 
   <!-- FOOTER -->
   <footer>
