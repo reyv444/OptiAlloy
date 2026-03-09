@@ -5,11 +5,18 @@
   box-sizing: border-box;
 }
 
+/* CONSISTENT BASE FONT SIZE */
+html {
+  font-size: 16px; /* ensures same text size across all pages */
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #0f0f0f;
   color: #d9d9d9;
   overflow-x: hidden;
+  font-size: 1rem; /* always relative to html base */
+  line-height: 1.6;
 }
 
 /* TOP BAR WITH LOGO ABOVE HAMBURGER */
@@ -43,14 +50,14 @@ body {
 
 /* HAMBURGER MENU */
 .hamburger {
-  width: 28px;
+  width: 36px;   /* fixed size for consistency */
   cursor: pointer;
   z-index: 11000;
 }
 
 .hamburger div {
   width: 100%;
-  height: 2px;
+  height: 3px;   /* fixed thickness */
   background: #d9d9d9;
   margin: 6px 0;
   transition: 0.3s ease;
@@ -80,7 +87,7 @@ body {
   color: #d9d9d9;
   padding: 18px 30px;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.2rem; /* consistent link size */
   transition: 0.3s;
 }
 
@@ -134,28 +141,38 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.2em;
+  font-size: 3.2rem; /* consistent heading size */
   font-weight: 700;
   margin-bottom: 10px;
   color: #e6e6e6;
 }
 
 .hero p {
-  font-size: 1.3em;
+  font-size: 1.3rem; /* consistent paragraph size */
   opacity: 0.85;
 }
 
 /* INTERNAL PAGE CONTENT */
 .content-page {
+  min-height: 100vh;       /* always fill screen height */
   padding: 120px 20px;
   max-width: 900px;
   margin: auto;
   color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
+}
+
+.content-page h1 {
+  font-size: 2.4rem; /* consistent heading size */
+  margin-bottom: 20px;
 }
 
 .content-page p {
   margin-bottom: 18px;
   line-height: 1.6;
+  font-size: 1rem; /* consistent paragraph size */
 }
 
 /* FOOTER */
@@ -165,7 +182,7 @@ footer {
   padding: 20px 0;
   color: #d9d9d9;
   opacity: 0.7;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   margin-top: 60px;
 }
 
@@ -203,7 +220,7 @@ footer {
 }
 
 .loader-text {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   letter-spacing: 2px;
   color: #d9d9d9;
   opacity: 0;
@@ -226,7 +243,6 @@ footer {
   margin: auto;
 }
 
-/* LEFT TEXT */
 .about-text {
   flex: 1;
   max-width: 600px;
@@ -235,9 +251,9 @@ footer {
 .about-text p {
   margin-bottom: 20px;
   line-height: 1.65;
+  font-size: 1rem; /* consistent text size */
 }
 
-/* RIGHT IMAGE SLIDER */
 .about-slider {
   width: 350px;
   height: 260px;
@@ -259,7 +275,34 @@ footer {
   opacity: 1;
 }
 
-/* MOBILE — STACKED */
+/* WHY US SECTION */
+.why-us {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;       /* align text to the left */
+  padding-left: 40px;     /* shift content slightly right */
+}
+
+.why-us h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #e6e6e6;
+}
+
+.why-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-us li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #d9d9d9;
+}
+
+/* MOBILE RESPONSIVE FIXES */
 @media (max-width: 900px) {
   .about-wrapper {
     flex-direction: column;
@@ -270,4 +313,18 @@ footer {
     width: 100%;
     height: 240px;
   }
+
+  .why-us {
+    padding-left: 20px; /* less offset on smaller screens */
+  }
 }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 8px
